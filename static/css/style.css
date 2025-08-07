@@ -3,80 +3,159 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Hero Section */
 .hero1 {
     background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 3em 1em;
 }
+
 .hero {
-    background-image: url('../images/UploadedImage4.jpg'); /* Adjust path if needed */
+    background-image: url('../images/UploadedImage4.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     padding: 60px 20px;
     text-align: center;
 }
+
 .cta-buttons {
     margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
 }
+
 .cta-buttons .btn {
     background-color: white;
     color: #4CAF50;
-    padding: 0.5em 1em;
-    margin: 0 0.5em;
+    padding: 0.75em 1.5em;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
+
+/* Sections */
 section {
     padding: 2em;
 }
+
+/* Services Grid */
 #services .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
     text-align: center;
 }
+
+/* Portfolio Images */
 .images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
     justify-items: center;
 }
+
 .images img {
     width: 100%;
-    max-width: 300px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border: 1px solid #ccc;
     display: block;
     aspect-ratio: 3 / 2;
 }
+
+/* Testimonials */
 #testimonials blockquote {
     font-style: italic;
     margin: 1em 0;
+    padding: 0 1em;
 }
+
+/* Contact Form */
 #contact form {
     display: grid;
     gap: 1em;
     max-width: 600px;
     margin: auto;
+    padding: 1em;
 }
-#contact input, #contact textarea {
-    padding: 0.5em;
+
+#contact input,
+#contact textarea {
+    padding: 0.75em;
     width: 100%;
     box-sizing: border-box;
+    font-size: 1em;
 }
+
 #contact button {
     background-color: #4CAF50;
     color: white;
     padding: 0.75em;
     border: none;
     cursor: pointer;
+    font-size: 1em;
 }
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em;
+}
+
+/* ------------------ */
+/* Responsive Styles  */
+/* ------------------ */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons .btn {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+
+    .images {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    #services .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form {
+        padding: 0.5em;
+    }
 }
