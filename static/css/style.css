@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.hero1 {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 3em 1em;
+}
+.hero {
+    background-image: url('../images/UploadedImage4.jpg'); /* Adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.cta-buttons {
+    margin-top: 1em;
+}
+.cta-buttons .btn {
+    background-color: white;
+    color: #4CAF50;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+section {
+    padding: 2em;
+}
+#services .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    text-align: center;
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    justify-items: center;
+}
+.images img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    display: block;
+    aspect-ratio: 3 / 2;
+}
+#testimonials blockquote {
+    font-style: italic;
+    margin: 1em 0;
+}
+#contact form {
+    display: grid;
+    gap: 1em;
+    max-width: 600px;
+    margin: auto;
+}
+#contact input, #contact textarea {
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75em;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}

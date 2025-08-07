@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenScape Landscaping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <h1>Transform Your Outdoor Space</h1>
+        <p>Premium Landscaping Services in Brampton & GTA</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn">Get a Free Quote</a>
+            <a href="#portfolio" class="btn">View Our Projects</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div>Landscape Design</div>
+            <div>Interlocking & Stonework</div>
+            <div>Outdoor Lighting</div>
+            <div>Garden Installation</div>
+            <div>Sod & Turf</div>
+            <div>Seasonal Maintenance</div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="images">
+            <img src="{{ url_for('static', filename='images/UploadedImage0.jpg') }}" alt="Project 1">
+            <img src="{{ url_for('static', filename='images/UploadedImage1.jpg') }}" alt="Project 2">
+            <img src="{{ url_for('static', filename='images/UploadedImage3.jpg') }}" alt="Project 3">
+            <img src="{{ url_for('static', filename='images/UploadedImage4.jpg') }}" alt="Project 4">
+        </div>
+        <!-- Separator between rows -->
+    <div style="border-top: 2px solid #FFFF; margin: 20px 0;"></div>
+        <div class="images">
+            <img src="{{ url_for('static', filename='images/UploadedImage5.jpg') }}" alt="Project 5">
+            <img src="{{ url_for('static', filename='images/UploadedImage6.jpg') }}" alt="Project 6">
+            <img src="{{ url_for('static', filename='images/UploadedImage7.jpg') }}" alt="Project 7">
+            <img src="{{ url_for('static', filename='images/UploadedImage8.jpg') }}" alt="Project 8">
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            “GreenScape transformed our backyard into a paradise. Highly recommended!” – Sarah M.
+        </blockquote>
+        <blockquote>
+            “Professional, reliable, and creative landscaping team.” – John D.
+        </blockquote>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="/send_message" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: info@greenscape.com | Phone: (123) 456-7890</p>
+        <p>Serving Brampton, Mississauga, Vaughan, and the GTA</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GreenScape Landscaping. All rights reserved.</p>
+    </footer>
+</body>
+</html>
